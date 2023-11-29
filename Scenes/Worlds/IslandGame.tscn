@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://nhxu6uqfp2gy"]
+[gd_scene load_steps=4 format=3 uid="uid://nhxu6uqfp2gy"]
 
 [ext_resource type="PackedScene" uid="uid://chasq0qf1w2xu" path="res://Scenes/Terrain/Water.tscn" id="1_356j5"]
 [ext_resource type="PackedScene" uid="uid://dd138kp6h813a" path="res://Scenes/Camera/RTSCamera.tscn" id="2_2kmgh"]
+[ext_resource type="PackedScene" uid="uid://b3h5feqevc3bu" path="res://Scenes/Terrain/Map.tscn" id="3_t14fj"]
 
 [node name="Node" type="Node"]
 
 [node name="Water" parent="." instance=ExtResource("1_356j5")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, -1, 0)
 
 [node name="RTSCamera" parent="." instance=ExtResource("2_2kmgh")]
 movementTime = 10.0
@@ -17,3 +19,5 @@ zoomTime = 10.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 10, 0)
+
+[node name="Map" parent="." instance=ExtResource("3_t14fj")]

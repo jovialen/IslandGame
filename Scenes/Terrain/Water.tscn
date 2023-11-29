@@ -5,6 +5,5 @@
 [sub_resource type="PlaneMesh" id="PlaneMesh_yipbh"]
 
 [node name="Water" type="MeshInstance3D"]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 mesh = SubResource("PlaneMesh_yipbh")
 surface_material_override/0 = ExtResource("1_kqfw5")

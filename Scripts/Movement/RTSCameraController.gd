@@ -88,6 +88,8 @@ func _handle_movement():
 
 
 func _update_position(delta):
+	newDistance = max(newDistance, 1)
+	
 	position = lerp(position, newPosition, delta * movementTime)
 	camera_3d.angle = lerp(camera_3d.angle, newAngle, delta * rotationTime)
 	camera_3d.tilt = lerp(camera_3d.tilt, newTilt, delta * rotationTime)

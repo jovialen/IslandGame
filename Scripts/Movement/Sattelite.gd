@@ -12,7 +12,9 @@ func _ready():
 		anchor = get_parent_node_3d()
 
 
-func _process(delta):
+func _physics_process(delta):
+	distance = max(distance, 1)
+	
 	var angle_r = deg_to_rad(angle)
 	var tilt_r = deg_to_rad(tilt)
 	

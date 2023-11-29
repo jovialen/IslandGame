@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd138kp6h813a"]
+
+[ext_resource type="Script" path="res://Scripts/Movement/RTSCameraController.gd" id="1_44mla"]
+[ext_resource type="Script" path="res://Scripts/Movement/Sattelite.gd" id="2_vem8t"]
+
+[node name="RTSCamera" type="Node3D"]
+script = ExtResource("1_44mla")
+
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("anchor")]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 1, 1)
+script = ExtResource("2_vem8t")
+anchor = NodePath("..")

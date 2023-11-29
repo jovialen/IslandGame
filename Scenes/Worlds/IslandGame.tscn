@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://nhxu6uqfp2gy"]
+
+[ext_resource type="PackedScene" uid="uid://chasq0qf1w2xu" path="res://Scenes/Terrain/Water.tscn" id="1_356j5"]
+
+[node name="Node" type="Node"]
+
+[node name="Water" parent="." instance=ExtResource("1_356j5")]

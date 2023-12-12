@@ -8,4 +8,13 @@ var biome : Biome
 
 
 func _ready():
+	update_mesh()
+
+
+func set_biome(newBiome):
+	biome = newBiome
+	update_mesh()
+
+
+func update_mesh():
 	mesh_instance_3d.set_surface_override_material(0, biome.material)

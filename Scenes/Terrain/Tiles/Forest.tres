@@ -8,5 +8,5 @@ albedo_color = Color(0.133333, 0.545098, 0.133333, 1)
 [resource]
 script = ExtResource("1_kte01")
 material = SubResource("StandardMaterial3D_6g3nf")
-frequency = 1
-exact = false
+frequency = 4
+exact = true

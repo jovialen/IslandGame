@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3h5feqevc3bu"]
+[gd_scene load_steps=8 format=3 uid="uid://b3h5feqevc3bu"]
 
 [ext_resource type="Script" path="res://Scripts/Grid/HexGrid.gd" id="2_63hn4"]
+[ext_resource type="Resource" uid="uid://cthxtf0s4hni2" path="res://Scenes/Terrain/Tiles/Desert.tres" id="2_afiqc"]
+[ext_resource type="Resource" uid="uid://cimoghdjmpqa8" path="res://Scenes/Terrain/Tiles/Forest.tres" id="3_44e4c"]
+[ext_resource type="Resource" uid="uid://bexpr3ysrwtg0" path="res://Scenes/Terrain/Tiles/Hills.tres" id="4_xbvhk"]
+[ext_resource type="Resource" uid="uid://lyfxixey2p1m" path="res://Scenes/Terrain/Tiles/Mountains.tres" id="5_ppy8w"]
+[ext_resource type="Resource" uid="uid://20cd77qgnftc" path="res://Scenes/Terrain/Tiles/Pasture.tres" id="6_4u6qb"]
+[ext_resource type="Resource" uid="uid://c2lcvkylrbhur" path="res://Scenes/Terrain/Tiles/Fields.tres" id="7_aon86"]
 
 [node name="HexGrid" type="Node3D"]
 script = ExtResource("2_63hn4")
+biomes = Array[Resource("res://Scripts/Grid/Biome.gd")]([ExtResource("2_afiqc"), ExtResource("3_44e4c"), ExtResource("4_xbvhk"), ExtResource("5_ppy8w"), ExtResource("6_4u6qb"), ExtResource("7_aon86")])

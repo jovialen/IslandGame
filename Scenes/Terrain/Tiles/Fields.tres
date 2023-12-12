@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Biome" load_steps=3 format=3 uid="uid://c2lcvkylrbhur"]
+
+[ext_resource type="Script" path="res://Scripts/Grid/Biome.gd" id="1_t7nxq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nyuol"]
+albedo_color = Color(0.254902, 0.596078, 0.0392157, 1)
+
+[resource]
+script = ExtResource("1_t7nxq")
+material = SubResource("StandardMaterial3D_nyuol")
+frequency = 4
+exact = true

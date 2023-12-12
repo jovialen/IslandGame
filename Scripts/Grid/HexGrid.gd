@@ -7,6 +7,8 @@ enum Orientation { FLAT, POINTY };
 @export var radius := 2
 @export var orientation := Orientation.POINTY;
 @export var tileSize := 2.0
+@export var biomes := [preload("res://Scenes/Terrain/Tiles/Desert.tres"),
+					   preload("res://Scenes/Terrain/Tiles/Forest.tres")]
 
 var tiles = []
 
@@ -26,7 +28,6 @@ func _ready():
 
 func _in_radius(xCoord, yCoord):
 	var offset = _coord_to_position(xCoord - radius, yCoord - radius)
-	print(offset)
 	return offset.x ** 2 + offset.y ** 2 <= (radius * tileSize * 2) ** 2
 
 
@@ -39,6 +40,7 @@ func _add_tile(xCoord, yCoord):
 	instance.rotation.y = _rotation()
 	
 	instance.coords = Vector2(xCoord, yCoord)
+	instance.biome = biomes[(xCoord + yCoord) % 2]
 	
 	instance.name = "Tile " + String.num(xCoord) + " " + String.num(yCoord)
 	add_child(instance, true)
